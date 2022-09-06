@@ -3,9 +3,6 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import InputLabel from '@mui/material/InputLabel';
 import Typography from '@mui/material/Typography';
 
 export default class Expense extends Component {
@@ -98,6 +95,11 @@ export default class Expense extends Component {
                             InputLabelProps={{
                                 shrink: true,
                             }}
+                            InputProps={{
+                                    inputProps:{
+                                        min:0
+                                    }
+                                }}
                             style={{width:"250px", margin:"5px"}}
                             helperText="Please enter amount"
                         />
